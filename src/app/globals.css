@@ -1,3 +1,5 @@
+/* globals.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -26,8 +28,32 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.poppins {
+  font-family: var(--font-poppins);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg-mainColor {
+  background-color: #8338ec;
+}
+
+.text-mainColor {
+  color: #8338ec;
+}
+
+.border-mainColor {
+  border-color: #8338ec;
+}
+
+.hover\:bg-mainColor:hover {
+  background-color: #8338ec;
+}
+
+.hover\:text-mainColor:hover {
+  color: #8338ec;
 }
