@@ -1,18 +1,20 @@
+// Models/UserSchema.ts
 import mongoose from "mongoose";
+
 const userSchema = new mongoose.Schema(
-    {
-        cleakUserId : {
-            type: String,
-            unique: true,
-            require: true
-        },
-        emailAddress: {
-            type: String,
-            required : true
-        },
+  {
+    clerkUserId: {  // Ensure correct field name here
+      type: String,
+      unique: true,
+      required: true,
     },
-    {timestamps: true}
+    emailAddress: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
 );
 
-const User = mongoose.models.User || mongoose.model("User",userSchema)
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 export default User;
